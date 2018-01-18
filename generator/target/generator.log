@@ -1,0 +1,51 @@
+02:20:22,011 INFO  org.apache.kafka.clients.producer.ProducerConfig              - ProducerConfig values: 
+	compression.type = snappy
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	acks = 0
+	batch.size = 1024
+	reconnect.backoff.ms = 10
+	bootstrap.servers = [localhost:9092]
+	receive.buffer.bytes = 67108864
+	retry.backoff.ms = 100
+	buffer.memory = 67108864
+	timeout.ms = 250
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	retries = 3
+	max.request.size = 5000000
+	block.on.buffer.full = true
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	send.buffer.bytes = 67108864
+	max.in.flight.requests.per.connection = 128
+	metrics.num.samples = 2
+	linger.ms = 0
+	client.id = 
+
+02:20:24,317 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	1418	2	1	ms,elements,elements/second
+02:20:24,819 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	413	821	ms,elements,elements/second
+02:20:25,334 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	515	1187	2304	ms,elements,elements/second
+02:20:25,856 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	522	2300	4406	ms,elements,elements/second
+02:20:26,358 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	502	3587	7145	ms,elements,elements/second
+02:20:26,859 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	5107	10193	ms,elements,elements/second
+02:20:27,364 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	504	6206	12313	ms,elements,elements/second
+02:20:27,864 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	7493	14956	ms,elements,elements/second
+02:20:28,367 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	3923	7799	ms,elements,elements/second
+02:20:28,870 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	2784	5534	ms,elements,elements/second
+02:20:29,372 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	502	4601	9165	ms,elements,elements/second
+02:20:29,875 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	2199	4371	ms,elements,elements/second
+02:20:30,378 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	6300	12524	ms,elements,elements/second
+02:20:30,880 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	7100	14171	ms,elements,elements/second
+02:20:31,381 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	502	10800	21513	ms,elements,elements/second
+02:20:31,882 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	9143	18249	ms,elements,elements/second
+02:20:32,383 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	11955	23862	ms,elements,elements/second
+02:20:32,887 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	504	7002	13892	ms,elements,elements/second
+02:20:33,388 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	7400	14770	ms,elements,elements/second
+02:20:33,890 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	502	8400	16733	ms,elements,elements/second
+02:20:34,393 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	4900	9741	ms,elements,elements/second
+02:20:34,907 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	6586	13145	ms,elements,elements/second
+02:20:35,410 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	516	10414	20182	ms,elements,elements/second
+02:20:35,912 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	6400	12774	ms,elements,elements/second
+02:20:36,418 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	507	6526	12871	ms,elements,elements/second
+02:20:36,922 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	6174	12274	ms,elements,elements/second

@@ -1,0 +1,9 @@
+fi/aalto/dmg/generator/UniformWordCount.class
+fi/aalto/dmg/util/Point.class
+fi/aalto/dmg/util/FastZipfGenerator.class
+fi/aalto/dmg/generator/AdvClick.class
+fi/aalto/dmg/generator/Generator.class
+fi/aalto/dmg/generator/KMeansPoints.class
+fi/aalto/dmg/generator/SkewedWordCount.class
+fi/aalto/dmg/generator/AdvClick$Advertisement.class
+fi/aalto/dmg/generator/AdvClick$ClickThread.class

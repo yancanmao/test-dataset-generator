@@ -1,0 +1,1 @@
+Generator is from [yangjun.wang](https://github.com/wangyangjun), I use its API to develop a Samza Benchmark, but maybe not have same methods, if the final result wa great, I would push a commit to Mr.Wang's repo.
