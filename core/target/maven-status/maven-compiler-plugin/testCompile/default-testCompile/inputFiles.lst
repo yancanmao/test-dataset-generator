@@ -1,4 +1,4 @@
-/root/workspace/TestStreamBench/core/src/test/java/fi/aalto/dmg/BenchStarterTest.java
-/root/workspace/TestStreamBench/core/src/test/java/fi/aalto/dmg/SetTest.java
-/root/workspace/TestStreamBench/core/src/test/java/fi/aalto/dmg/RecordTimeSeparatorTest.java
-/root/workspace/TestStreamBench/core/src/test/java/fi/aalto/dmg/ThreadPoolTest.java
+/root/workspace/TestGenerator/core/src/test/java/fi/aalto/dmg/RecordTimeSeparatorTest.java
+/root/workspace/TestGenerator/core/src/test/java/fi/aalto/dmg/BenchStarterTest.java
+/root/workspace/TestGenerator/core/src/test/java/fi/aalto/dmg/SetTest.java
+/root/workspace/TestGenerator/core/src/test/java/fi/aalto/dmg/ThreadPoolTest.java

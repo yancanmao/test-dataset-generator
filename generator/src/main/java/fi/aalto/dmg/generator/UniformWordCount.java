@@ -44,17 +44,18 @@ public class UniformWordCount extends Generator {
         // for loop to generate message
         for (long sent_sentences = 0; sent_sentences < SENTENCE_NUM; ++sent_sentences) {
             double sentence_length = messageGenerator.nextGaussian(mu, sigma);
-            StringBuilder messageBuilder = new StringBuilder();
+            //StringBuilder messageBuilder = new StringBuilder();
+            throughput.execute();
             for (int l = 0; l < sentence_length; ++l) {
                 int number = messageGenerator.nextInt(1, uniformSize);
-                messageBuilder.append(Utils.intToString(number)).append(" ");
+                //messageBuilder.append(Utils.intToString(number)).append(" ");
+                ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, Utils.intToString(number));
+                producer.send(newRecord);
             }
 
             // Add timestamp
-            messageBuilder.append(Constant.TimeSeparator).append(System.currentTimeMillis());
-            throughput.execute();
-            ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, messageBuilder.toString());
-            producer.send(newRecord);
+            //messageBuilder.append(Constant.TimeSeparator).append(System.currentTimeMillis());
+            
 
             // control data generate speed
             if (sleep_frequency > 0 && sent_sentences % sleep_frequency == 0) {

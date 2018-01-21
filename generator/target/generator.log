@@ -1,4 +1,4 @@
-02:20:22,011 INFO  org.apache.kafka.clients.producer.ProducerConfig              - ProducerConfig values: 
+19:20:25,387 INFO  org.apache.kafka.clients.producer.ProducerConfig              - ProducerConfig values: 
 	compression.type = snappy
 	metric.reporters = []
 	metadata.max.age.ms = 300000
@@ -23,29 +23,196 @@
 	linger.ms = 0
 	client.id = 
 
-02:20:24,317 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	1418	2	1	ms,elements,elements/second
-02:20:24,819 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	413	821	ms,elements,elements/second
-02:20:25,334 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	515	1187	2304	ms,elements,elements/second
-02:20:25,856 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	522	2300	4406	ms,elements,elements/second
-02:20:26,358 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	502	3587	7145	ms,elements,elements/second
-02:20:26,859 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	5107	10193	ms,elements,elements/second
-02:20:27,364 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	504	6206	12313	ms,elements,elements/second
-02:20:27,864 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	7493	14956	ms,elements,elements/second
-02:20:28,367 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	3923	7799	ms,elements,elements/second
-02:20:28,870 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	2784	5534	ms,elements,elements/second
-02:20:29,372 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	502	4601	9165	ms,elements,elements/second
-02:20:29,875 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	2199	4371	ms,elements,elements/second
-02:20:30,378 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	6300	12524	ms,elements,elements/second
-02:20:30,880 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	7100	14171	ms,elements,elements/second
-02:20:31,381 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	502	10800	21513	ms,elements,elements/second
-02:20:31,882 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	9143	18249	ms,elements,elements/second
-02:20:32,383 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	11955	23862	ms,elements,elements/second
-02:20:32,887 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	504	7002	13892	ms,elements,elements/second
-02:20:33,388 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	7400	14770	ms,elements,elements/second
-02:20:33,890 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	502	8400	16733	ms,elements,elements/second
-02:20:34,393 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	4900	9741	ms,elements,elements/second
-02:20:34,907 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	6586	13145	ms,elements,elements/second
-02:20:35,410 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	516	10414	20182	ms,elements,elements/second
-02:20:35,912 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	501	6400	12774	ms,elements,elements/second
-02:20:36,418 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	507	6526	12871	ms,elements,elements/second
-02:20:36,922 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - KMeansPoints:	503	6174	12274	ms,elements,elements/second
+19:20:26,425 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	61	121	ms,elements,elements/second
+19:20:26,923 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	684	1365	ms,elements,elements/second
+19:20:27,424 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	1403	2800	ms,elements,elements/second
+19:20:27,926 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	502	1854	3693	ms,elements,elements/second
+19:20:28,427 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	1900	3792	ms,elements,elements/second
+19:20:28,931 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	504	2100	4166	ms,elements,elements/second
+19:20:29,432 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	2181	4353	ms,elements,elements/second
+19:20:29,933 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	2519	5027	ms,elements,elements/second
+19:20:30,440 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	507	3095	6104	ms,elements,elements/second
+19:20:30,943 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	503	3362	6683	ms,elements,elements/second
+19:20:31,444 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	3489	6964	ms,elements,elements/second
+19:20:31,946 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	502	4535	9033	ms,elements,elements/second
+19:20:32,448 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	502	4219	8404	ms,elements,elements/second
+19:20:32,949 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	4200	8383	ms,elements,elements/second
+19:20:33,450 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	4329	8640	ms,elements,elements/second
+19:20:33,956 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	506	4271	8440	ms,elements,elements/second
+19:20:34,457 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	4500	8982	ms,elements,elements/second
+19:20:34,960 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	503	4700	9343	ms,elements,elements/second
+19:20:35,468 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	508	4300	8464	ms,elements,elements/second
+19:20:35,969 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	4318	8618	ms,elements,elements/second
+19:20:36,472 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	503	4682	9308	ms,elements,elements/second
+19:20:36,974 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	502	4601	9165	ms,elements,elements/second
+19:20:37,476 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	502	4402	8768	ms,elements,elements/second
+19:20:37,978 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	502	4397	8758	ms,elements,elements/second
+19:20:38,483 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	505	3900	7722	ms,elements,elements/second
+19:20:38,985 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	502	4270	8505	ms,elements,elements/second
+19:20:39,497 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	512	4030	7871	ms,elements,elements/second
+19:20:40,002 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	505	3970	7861	ms,elements,elements/second
+19:20:40,505 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	503	3730	7415	ms,elements,elements/second
+19:20:41,015 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	510	1600	3137	ms,elements,elements/second
+19:20:41,517 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	502	2200	4382	ms,elements,elements/second
+19:20:42,020 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	503	3300	6560	ms,elements,elements/second
+19:20:42,521 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	3300	6586	ms,elements,elements/second
+19:20:43,055 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	534	2964	5550	ms,elements,elements/second
+19:20:43,556 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	501	2536	5061	ms,elements,elements/second
+19:21:30,482 INFO  org.apache.kafka.clients.producer.ProducerConfig              - ProducerConfig values: 
+	compression.type = snappy
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	acks = 0
+	batch.size = 1024
+	reconnect.backoff.ms = 10
+	bootstrap.servers = [localhost:9092]
+	receive.buffer.bytes = 67108864
+	retry.backoff.ms = 100
+	buffer.memory = 67108864
+	timeout.ms = 250
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	retries = 3
+	max.request.size = 5000000
+	block.on.buffer.full = true
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	send.buffer.bytes = 67108864
+	max.in.flight.requests.per.connection = 128
+	metrics.num.samples = 2
+	linger.ms = 0
+	client.id = 
+
+19:21:31,521 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	519	8	15	ms,elements,elements/second
+19:21:32,054 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	534	46	86	ms,elements,elements/second
+19:21:32,570 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - SkewedWordCount:	516	53	102	ms,elements,elements/second
+21:42:54,860 INFO  org.apache.kafka.clients.producer.ProducerConfig              - ProducerConfig values: 
+	compression.type = snappy
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	acks = 0
+	batch.size = 1024
+	reconnect.backoff.ms = 10
+	bootstrap.servers = [localhost:9092]
+	receive.buffer.bytes = 67108864
+	retry.backoff.ms = 100
+	buffer.memory = 67108864
+	timeout.ms = 250
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	retries = 3
+	max.request.size = 5000000
+	block.on.buffer.full = true
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	send.buffer.bytes = 67108864
+	max.in.flight.requests.per.connection = 128
+	metrics.num.samples = 2
+	linger.ms = 0
+	client.id = 
+
+21:42:56,152 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	503	340	675	ms,elements,elements/second
+21:42:56,656 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	660	1309	ms,elements,elements/second
+21:42:57,162 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	507	1772	3495	ms,elements,elements/second
+21:42:57,679 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	517	2528	4889	ms,elements,elements/second
+21:42:58,191 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	512	3300	6445	ms,elements,elements/second
+21:42:58,695 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	3700	7341	ms,elements,elements/second
+21:42:59,198 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	503	3800	7554	ms,elements,elements/second
+21:42:59,702 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	6600	13095	ms,elements,elements/second
+21:43:00,203 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	7300	14570	ms,elements,elements/second
+21:43:00,705 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	11501	22910	ms,elements,elements/second
+21:43:01,207 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	10800	21513	ms,elements,elements/second
+21:43:01,709 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	7900	15737	ms,elements,elements/second
+21:43:02,211 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	6399	12747	ms,elements,elements/second
+21:43:02,713 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	6400	12749	ms,elements,elements/second
+21:43:03,215 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	7300	14541	ms,elements,elements/second
+21:43:03,717 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	6400	12749	ms,elements,elements/second
+21:43:04,227 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	510	5870	11509	ms,elements,elements/second
+21:43:04,731 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	5530	10972	ms,elements,elements/second
+21:43:05,236 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	5300	10515	ms,elements,elements/second
+21:43:05,740 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	505	5500	10891	ms,elements,elements/second
+21:43:06,243 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	503	6600	13121	ms,elements,elements/second
+21:43:06,746 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	503	6900	13717	ms,elements,elements/second
+21:43:07,250 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	7300	14484	ms,elements,elements/second
+21:43:07,763 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	513	6471	12614	ms,elements,elements/second
+21:43:08,270 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	507	8029	15836	ms,elements,elements/second
+21:43:08,771 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	8300	16566	ms,elements,elements/second
+21:43:09,272 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	8600	17165	ms,elements,elements/second
+21:43:09,774 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	8901	17731	ms,elements,elements/second
+21:43:10,276 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	11600	23107	ms,elements,elements/second
+21:43:10,777 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	11955	23862	ms,elements,elements/second
+21:43:11,278 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	13245	26437	ms,elements,elements/second
+21:43:11,780 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	14800	29482	ms,elements,elements/second
+21:43:12,281 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	12699	25347	ms,elements,elements/second
+21:43:12,782 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	13810	27564	ms,elements,elements/second
+21:43:13,289 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	507	15562	30694	ms,elements,elements/second
+21:43:13,790 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	13292	26530	ms,elements,elements/second
+21:43:14,292 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	13636	27163	ms,elements,elements/second
+21:43:14,793 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	15001	29942	ms,elements,elements/second
+21:43:15,294 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	13800	27544	ms,elements,elements/second
+21:43:15,795 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	14100	28143	ms,elements,elements/second
+21:43:16,296 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	14199	28341	ms,elements,elements/second
+21:43:16,808 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	512	14301	27931	ms,elements,elements/second
+21:43:17,309 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	14200	28343	ms,elements,elements/second
+21:43:17,810 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	14500	28942	ms,elements,elements/second
+21:43:18,311 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	7199	14369	ms,elements,elements/second
+21:43:19,525 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	1214	2401	1977	ms,elements,elements/second
+21:43:20,606 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	1081	1	0	ms,elements,elements/second
+21:43:21,108 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	5699	11352	ms,elements,elements/second
+21:43:21,612 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	4770	9464	ms,elements,elements/second
+21:43:22,113 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	7829	15626	ms,elements,elements/second
+21:43:22,615 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	7301	14543	ms,elements,elements/second
+21:43:23,116 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	7215	14401	ms,elements,elements/second
+21:43:23,624 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	508	6232	12267	ms,elements,elements/second
+21:43:24,128 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	6152	12206	ms,elements,elements/second
+21:43:24,917 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	789	5800	7351	ms,elements,elements/second
+21:43:25,422 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	505	4446	8803	ms,elements,elements/second
+21:43:26,020 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	597	2854	4780	ms,elements,elements/second
+21:43:26,847 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	828	4100	4951	ms,elements,elements/second
+21:43:27,357 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	510	3500	6862	ms,elements,elements/second
+21:43:27,859 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	2700	5378	ms,elements,elements/second
+21:43:28,365 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	506	4100	8102	ms,elements,elements/second
+21:43:28,867 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	5001	9962	ms,elements,elements/second
+21:44:22,196 INFO  org.apache.kafka.clients.producer.ProducerConfig              - ProducerConfig values: 
+	compression.type = snappy
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	acks = 0
+	batch.size = 1024
+	reconnect.backoff.ms = 10
+	bootstrap.servers = [localhost:9092]
+	receive.buffer.bytes = 67108864
+	retry.backoff.ms = 100
+	buffer.memory = 67108864
+	timeout.ms = 250
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	retries = 3
+	max.request.size = 5000000
+	block.on.buffer.full = true
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	send.buffer.bytes = 67108864
+	max.in.flight.requests.per.connection = 128
+	metrics.num.samples = 2
+	linger.ms = 0
+	client.id = 
+
+21:44:23,186 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	1800	3592	ms,elements,elements/second
+21:44:23,688 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	5401	10758	ms,elements,elements/second
+21:44:24,190 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	6199	12348	ms,elements,elements/second
+21:44:24,691 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	6501	12976	ms,elements,elements/second
+21:44:25,196 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	505	9499	18809	ms,elements,elements/second
+21:44:25,699 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	503	11000	21868	ms,elements,elements/second
+21:44:26,203 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	5925	11755	ms,elements,elements/second
+21:44:26,704 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	9676	19313	ms,elements,elements/second
+21:44:27,206 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	502	7199	14340	ms,elements,elements/second
+21:44:27,709 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	503	6900	13717	ms,elements,elements/second
+21:44:28,215 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	506	7701	15219	ms,elements,elements/second
+21:44:28,716 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	501	7299	14568	ms,elements,elements/second
+21:44:29,219 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	503	6800	13518	ms,elements,elements/second
+21:44:29,723 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	504	3566	7075	ms,elements,elements/second
+21:44:30,228 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	505	3035	6009	ms,elements,elements/second
+21:44:30,734 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	506	2299	4543	ms,elements,elements/second
+21:44:31,240 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	506	1501	2966	ms,elements,elements/second
+21:44:31,780 WARN  fi.aalto.dmg.statistics.ThroughputLog                         - AdvClick:	540	2100	3888	ms,elements,elements/second

@@ -1,4 +1,4 @@
-/root/workspace/TestStreamBench/generator/src/test/java/fi/aalto/dmg/SimpleProducer.java
-/root/workspace/TestStreamBench/generator/src/test/java/fi/aalto/dmg/ZipfGeneratorTest.java
-/root/workspace/TestStreamBench/generator/src/test/java/fi/aalto/dmg/AppTest.java
-/root/workspace/TestStreamBench/generator/src/test/java/fi/aalto/dmg/GaussianPoints.java
+/root/workspace/TestGenerator/generator/src/test/java/fi/aalto/dmg/SimpleProducer.java
+/root/workspace/TestGenerator/generator/src/test/java/fi/aalto/dmg/GaussianPoints.java
+/root/workspace/TestGenerator/generator/src/test/java/fi/aalto/dmg/ZipfGeneratorTest.java
+/root/workspace/TestGenerator/generator/src/test/java/fi/aalto/dmg/AppTest.java

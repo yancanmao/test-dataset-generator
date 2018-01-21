@@ -48,17 +48,13 @@ public class SkewedWordCount extends Generator {
         for (long sent_sentences = 0; sent_sentences < SENTENCE_NUM; ++sent_sentences) {
             double sentence_length = messageGenerator.nextGaussian(mu, sigma);
             StringBuilder messageBuilder = new StringBuilder();
+            throughput.execute();
             for (int l = 0; l < sentence_length; ++l) {
                 int number = zipfGenerator.next();
-                messageBuilder.append(Utils.intToString(number)).append(" ");
-            }
-
-            // Add timestamp
-            messageBuilder.append(Constant.TimeSeparator).append(System.currentTimeMillis());
-
-            throughput.execute();
-            ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, messageBuilder.toString());
-            producer.send(newRecord);
+                //messageBuilder.append(Utils.intToString(number)).append(" ");
+                ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, Utils.intToString(number));
+                producer.send(newRecord);
+           }
 
             // control data generate speed
             if (sleep_frequency > 0 && sent_sentences % sleep_frequency == 0) {
