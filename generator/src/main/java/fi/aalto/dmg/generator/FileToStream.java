@@ -43,19 +43,19 @@ public class FileToStream extends Generator {
         BufferedReader br = null;
         int sent_sentences = 0;
         try {
-        //stream = this.getClass().getClassLoader().getResourceAsStream("CJ20100913.txt");
-        stream = new FileReader("/root/CJ20100913.txt");
-        br = new BufferedReader(stream);
-        while ((sCurrentLine = br.readLine()) != null) {
-            throughput.execute();
-            sent_sentences++;
-            ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, sCurrentLine);
-            producer.send(newRecord);
-             if (sleep_frequency > 0 && sent_sentences % sleep_frequency == 0) {
-                 Thread.sleep(1);
-             }
-            //Thread.sleep(1000);
-        }
+            //stream = this.getClass().getClassLoader().getResourceAsStream("CJ20100913.txt");
+            stream = new FileReader("/root/CJ20100913.txt");
+            br = new BufferedReader(stream);
+            while ((sCurrentLine = br.readLine()) != null) {
+                throughput.execute();
+                sent_sentences++;
+                ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, sCurrentLine);
+                producer.send(newRecord);
+                if (sleep_frequency > 0 && sent_sentences % sleep_frequency == 0) {
+                    Thread.sleep(1);
+                }
+                //Thread.sleep(1000);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
