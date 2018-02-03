@@ -33,10 +33,36 @@ public class FileToStream extends Generator {
         TOPIC = this.properties.getProperty("topic", "FileToStream");
     }
 
-    public void generate(int sleep_frequency) throws InterruptedException {
+    // a func that not make sense, but just save
+    // public void check(String sCurrentLine) {
+    //     String currentBatch = null;
+    //     long counter = System.currentTimeMillis();
+    //     int interval = 0;
+    //     // String[] textArr = new String[];
+    //     String[] textArr = sCurrentLine.split("\\|");
+    //     if (currentBatch == null) {
+    //         currentBatch = textArr[2];
+    //     }
+    //     if (currentBatch != textArr[2]) {
+    //         interval = (int)(System.currentTimeMillis() - counter);
+    //         if (interval >= 1000) {
+    //             System.out.println("interval >= 1000, output too slow");
+    //         } else {
+    //             Thread.sleep(1000-interval);
+    //         }
+    //         currentBatch = textArr[2];
+    //         counter = System.currentTimeMillis();
+    //     }
+    // }
+
+    public void generate() throws InterruptedException {
 
         long time = System.currentTimeMillis();
+        long counter = time;
+        int interval = 0;
         String sCurrentLine;
+        String[] textArr = new String[];
+        String currentBatch = null;
         FileReader stream = null; 
         ThroughputLog throughput = new ThroughputLog(this.getClass().getSimpleName());
         // // for loop to generate message
@@ -48,12 +74,23 @@ public class FileToStream extends Generator {
             br = new BufferedReader(stream);
             while ((sCurrentLine = br.readLine()) != null) {
                 throughput.execute();
-                sent_sentences++;
+                // sent_sentences++;
+                textArr = sCurrentLine.split("\\|");
+                if (currentBatch == null) {
+                    currentBatch = textArr[2];
+                }
+                if (currentBatch != textArr[2]) {
+                    interval = (int)(System.currentTimeMillis() - counter);
+                    if (interval >= 1000) {
+                        System.out.println("interval >= 1000, output too slow");
+                    } else {
+                        Thread.sleep(1000-interval);
+                    }
+                    currentBatch = textArr[2];
+                    counter = System.currentTimeMillis();
+                }
                 ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, sCurrentLine);
                 producer.send(newRecord);
-                if (sleep_frequency > 0 && sent_sentences % sleep_frequency == 0) {
-                    Thread.sleep(1);
-                }
                 //Thread.sleep(1000);
             }
         } catch (IOException e) {
@@ -71,11 +108,11 @@ public class FileToStream extends Generator {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        int SLEEP_FREQUENCY = -1;
-        if (args.length > 0) {
-            SLEEP_FREQUENCY = Integer.parseInt(args[0]);
-        }
-        new FileToStream().generate(SLEEP_FREQUENCY);
+        // int SLEEP_FREQUENCY = -1;
+        // if (args.length > 0) {
+        //     SLEEP_FREQUENCY = Integer.parseInt(args[0]);
+        // }
+        new FileToStream().generate();
     }
 }
 
