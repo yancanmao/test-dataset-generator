@@ -61,28 +61,31 @@ public class FileToStream extends Generator {
         long counter = time;
         int interval = 0;
         String sCurrentLine;
-        String[] textArr = new String[];
+        String[] textArr = null;
         String currentBatch = null;
         FileReader stream = null; 
-        ThroughputLog throughput = new ThroughputLog(this.getClass().getSimpleName());
+        //ThroughputLog throughput = new ThroughputLog(this.getClass().getSimpleName());
         // // for loop to generate message
         BufferedReader br = null;
         int sent_sentences = 0;
         try {
             //stream = this.getClass().getClassLoader().getResourceAsStream("CJ20100913.txt");
-            stream = new FileReader("/root/CJ20100913.txt");
+            stream = new FileReader("/root/sort_CJ.txt");
             br = new BufferedReader(stream);
             while ((sCurrentLine = br.readLine()) != null) {
-                throughput.execute();
-                // sent_sentences++;
+                //throughput.execute();
+                sent_sentences++;
                 textArr = sCurrentLine.split("\\|");
                 if (currentBatch == null) {
                     currentBatch = textArr[2];
                 }
-                if (currentBatch != textArr[2]) {
+                //System.out.println(currentBatch + " " + textArr[2]);
+                if (!currentBatch.equals(textArr[2])) {
                     interval = (int)(System.currentTimeMillis() - counter);
+                    System.out.println("interval " + interval + " sent"+ sent_sentences);
+                    sent_sentences = 0;
                     if (interval >= 1000) {
-                        System.out.println("interval >= 1000, output too slow");
+                        System.out.println("interval " + interval + ", output too slow");
                     } else {
                         Thread.sleep(1000-interval);
                     }
