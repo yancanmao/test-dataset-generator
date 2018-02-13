@@ -183,6 +183,7 @@ public class KMeansPoints extends Generator {
 
             double[] point = distribution.sample();
             StringBuilder sb = new StringBuilder();
+            System.out.println(point[0]+" "+point[1]);
             for (int i = 0; i < dimension - 1; i++) {
                 point[i] += centroids.get(centroid_index).location[i];
                 sb.append(point[i]).append("\t");
