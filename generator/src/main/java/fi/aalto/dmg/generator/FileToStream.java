@@ -1,6 +1,7 @@
 package fi.aalto.dmg.generator;
 
 import java.io.*;
+import java.util.*;
 import fi.aalto.dmg.statistics.ThroughputLog;
 import fi.aalto.dmg.util.Constant;
 import fi.aalto.dmg.util.Utils;
@@ -50,7 +51,7 @@ public class FileToStream extends Generator {
                     interval = 1000000000/textList.size();
                     for (int i=0; i<textList.size(); i++) {
                         cur = System.nanoTime();
-                        ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, sCurrentLine);
+                        ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, textList.get(i));
                         producer.send(newRecord);
                         while ((System.nanoTime() - cur) < interval) {}
                     }
@@ -70,7 +71,7 @@ public class FileToStream extends Generator {
             }
         }
         producer.close();
-        logger.info("LatencyLog: " + String.valueOf(System.currentTimeMillis() - time));
+        //logger.info("LatencyLog: " + String.valueOf(System.currentTimeMillis() - time));
     }
 
     public static void main(String[] args) throws InterruptedException {
