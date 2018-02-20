@@ -21,10 +21,7 @@ public class FileToStream extends Generator {
     private String TOPIC;
     // private long SENTENCE_NUM = 1000000000;
 
-    // private int zipfSize;
-    // private double zipfExponent;
     private double mu;
-    // private double sigma;
 
     public FileToStream() {
         super();
@@ -33,78 +30,35 @@ public class FileToStream extends Generator {
         TOPIC = this.properties.getProperty("topic", "FileToStream");
     }
 
-    // a func that not make sense, but just save
-    // public void check(String sCurrentLine) {
-    //     String currentBatch = null;
-    //     long counter = System.currentTimeMillis();
-    //     int interval = 0;
-    //     // String[] textArr = new String[];
-    //     String[] textArr = sCurrentLine.split("\\|");
-    //     if (currentBatch == null) {
-    //         currentBatch = textArr[2];
-    //     }
-    //     if (currentBatch != textArr[2]) {
-    //         interval = (int)(System.currentTimeMillis() - counter);
-    //         if (interval >= 1000) {
-    //             System.out.println("interval >= 1000, output too slow");
-    //         } else {
-    //             Thread.sleep(1000-interval);
-    //         }
-    //         currentBatch = textArr[2];
-    //         counter = System.currentTimeMillis();
-    //     }
-    // }
-
     public void generate() throws InterruptedException {
 
-        long time = System.currentTimeMillis();
-        long counter = time;
-        int interval = 0;
         String sCurrentLine;
-        String[] textArr = null;
-        String currentBatch = null;
+        List<String> textList = new ArrayList<>();
         FileReader stream = null; 
-        ThroughputLog throughput = new ThroughputLog(this.getClass().getSimpleName());
         // // for loop to generate message
         BufferedReader br = null;
         int sent_sentences = 0;
+        long cur = 0;
+        long start = 0;
+        long interval = 0;
         try {
-            //stream = this.getClass().getClassLoader().getResourceAsStream("CJ20100913.txt");
-            stream = new FileReader("/root/share/sortSBAll.txt");
+            stream = new FileReader("/root/share/sortSBStream.txt");
             br = new BufferedReader(stream);
             while ((sCurrentLine = br.readLine()) != null) {
-                throughput.execute();
-                textArr = sCurrentLine.split("\\|");
-                currentBatch = textArr[3].replace(':','');
-                if ((int)currentBatch <= 93000) {
+                if (sCurrentLine.equals("end")) {
+                    start = System.nanoTime();
+                    interval = 1000000000/textList.size();
+                    for (int i=0; i<textList.size(); i++) {
+                        cur = System.nanoTime();
+                        ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, sCurrentLine);
+                        producer.send(newRecord);
+                        while ((System.nanoTime() - cur) < interval) {}
+                    }
+                    System.out.println((System.nanoTime() - start)/1000000);
                     continue;
                 }
-
-                // if (currentBatch == null) {
-                //     currentBatch = textArr[2];
-                // }
-                //System.out.println(currentBatch + " " + textArr[2]);
-                // if (!currentBatch.equals(textArr[2])) {
-                //     interval = (int)(System.currentTimeMillis() - counter);
-                //     System.out.println("interval " + interval + " sent"+ sent_sentences);
-                //     sent_sentences = 0;
-                //     if (interval >= 1000) {
-                //         System.out.println("interval " + interval + ", output too slow");
-                //     } else {
-                //         Thread.sleep(1000-interval);
-                //     }
-                //     currentBatch = textArr[2];
-                //     counter = System.currentTimeMillis();
-                // }
-                sent_sentences++;
-                 if (sleep_frequency > 0 && sent_sentences % sleep_frequency == 0) {
-                    sent_sentences = 0;
-                    Thread.sleep(10);
-                }
-                ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, sCurrentLine);
-                producer.send(newRecord);
-                //Thread.sleep(1000);
             }
+            textList.add(sCurrentLine);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -120,11 +74,7 @@ public class FileToStream extends Generator {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        int SLEEP_FREQUENCY = -1;
-        if (args.length > 0) {
-            SLEEP_FREQUENCY = Integer.parseInt(args[0]);
-        }
-        new FileToStream().generate(SLEEP_FREQUENCY);
+        new FileToStream().generate();
     }
 }
 
