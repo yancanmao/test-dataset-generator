@@ -42,6 +42,7 @@ public class FileToStream extends Generator {
         long cur = 0;
         long start = 0;
         long interval = 0;
+        long inter = 0;
         try {
             stream = new FileReader("/root/share/sortSBStream.txt");
             br = new BufferedReader(stream);
@@ -49,17 +50,23 @@ public class FileToStream extends Generator {
                 if (sCurrentLine.equals("end")) {
                     start = System.nanoTime();
                     interval = 1000000000/textList.size();
+                    //if (textList.size() > 70000){ 
                     for (int i=0; i<textList.size(); i++) {
                         cur = System.nanoTime();
                         ProducerRecord<String, String> newRecord = new ProducerRecord<>(TOPIC, textList.get(i));
                         producer.send(newRecord);
+                        //System.out.println(System.nanoTime() - cur);
                         while ((System.nanoTime() - cur) < interval) {}
                     }
-                    System.out.println((System.nanoTime() - start)/1000000);
+                    //}
+                    System.out.println("size:"+String.valueOf(textList.size()));
+                    System.out.println("time:"+String.valueOf((System.nanoTime() - start)/1000000));
+                    System.out.println("interval:"+String.valueOf((System.nanoTime() - start)/(textList.size())));
+                    textList.clear();
                     continue;
                 }
+                textList.add(sCurrentLine);
             }
-            textList.add(sCurrentLine);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
