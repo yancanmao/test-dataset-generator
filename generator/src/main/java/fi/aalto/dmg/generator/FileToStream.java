@@ -26,12 +26,12 @@ public class FileToStream extends Generator {
 
     public FileToStream() {
         super();
-        producer = createBigBufferProducer();
+        producer = createSmallBufferProducer();
 
         TOPIC = this.properties.getProperty("topic", "FileToStream");
     }
 
-    public void generate() throws InterruptedException {
+    public void generate(String partition) throws InterruptedException {
 
         String sCurrentLine;
         List<String> textList = new ArrayList<>();
@@ -44,7 +44,8 @@ public class FileToStream extends Generator {
         long interval = 0;
         long inter = 0;
         try {
-            stream = new FileReader("/root/share/sortSBStream.txt");
+            //stream = new FileReader("/root/share/sortSBStream.txt");
+            stream = new FileReader("/root/share/"+partition+".txt");
             br = new BufferedReader(stream);
             while ((sCurrentLine = br.readLine()) != null) {
                 if (sCurrentLine.equals("end")) {
@@ -82,7 +83,11 @@ public class FileToStream extends Generator {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        new FileToStream().generate();
+       	String partition = new String();
+        if (args.length > 0) {
+            partition = args[0];
+        } 
+        new FileToStream().generate(partition);
     }
 }
 
